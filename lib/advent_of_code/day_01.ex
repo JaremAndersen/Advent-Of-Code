@@ -1,7 +1,6 @@
 defmodule AdventOfCode.Day01 do
-  def part1 do
-    input = AdventOfCode.Input.get!(1, 2021) |> String.split("\n")
-    IO.puts(countIncreasing(input, 1))
+  def part1(args) do
+    countIncreasing(args, 1)
   end
 
   def countIncreasing(list, count) do
@@ -15,13 +14,8 @@ defmodule AdventOfCode.Day01 do
     end
   end
 
-  def part2() do
-    input =
-      AdventOfCode.Input.get!(1, 2021)
-      |> String.split()
-      |> Enum.map(&String.to_integer(&1))
-
-    IO.puts(countIncreasing2(input, 1))
+  def part2(args) do
+    countIncreasing2(args, 1)
   end
 
   def countIncreasing2(list, count) do
